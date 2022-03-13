@@ -6,11 +6,11 @@
 #github.com/firatksee
 
 
-def largestPalindrome():
-	result = (m*n for m in range(100,1000)
-			for n in range(100,1000)
+def largestPalindrome(start, stop):
+	result = (m*n for m in range(start, stop)
+			for n in range(start, stop)
 			if str(m*n) == str(m*n)[::-1])
 	return result
 
 if __name__ == "__main__":
-	print(max(largestPalindrome()))
+	print(max(largestPalindrome(100, 1000)))
