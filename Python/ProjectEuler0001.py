@@ -1,14 +1,16 @@
 
-#projecteuler.net/problem=1
+# projecteuler.net/problem=1
 
-#Answer: 233168
+# Answer: 233168
 
-#github.com/firatksee
+# github.com/firatksee
 
 
-def multiples():
-	result = sum(i for i in range(1000) if i % 3 == 0 or i % 5 == 0)
-	return result
+def multiples(limit):
+    result = sum(i for i in range(limit) if i % 3 == 0 or i % 5 == 0)
+    return result
+
 
 if __name__ == "__main__":
-	print(multiples())
+    limit = 1000
+    print(multiples(limit))
