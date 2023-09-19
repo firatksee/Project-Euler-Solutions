@@ -1,22 +1,22 @@
 
-#projecteuler.net/problem=18
+# projecteuler.net/problem=18
 
-#Answer: 1074
+# Answer: 1074
 
-#github.com/firatksee
+# github.com/firatksee
 
 
-#start from the bottom and add the largest of adjacent numbers to the one above,
-#as we climb the triangle by accumulating, maximum sum will reveal itself at the top row
+# start from the bottom and add the largest of adjacent numbers to the one above,
+# as we climb the triangle by accumulating, maximum sum will reveal itself at the top row
 
 def maxPathSum(data):
-	data = data[::-1]	#reverses the data
+    data = data[::-1]  # reverses the data
 
-	for i in range(1,len(data)):
-		for j in range(len(data[i])):
-			data[i][j] += max(data[i - 1][j], data[i - 1][j + 1])
+    for i in range(1, len(data)):
+        for j in range(len(data[i])):
+            data[i][j] += max(data[i - 1][j], data[i - 1][j + 1])
 
-	return data[-1][0]
+    return data[-1][0]
 
 
 data = [[75],
@@ -33,8 +33,8 @@ data = [[75],
         [70, 11, 33, 28, 77, 73, 17, 78, 39, 68, 17, 57],
         [91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48],
         [63, 66,  4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
-        [ 4, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60,  4, 23]]
+        [4, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60,  4, 23]]
 
 
 if __name__ == "__main__":
-	print(maxPathSum(data))
+    print(maxPathSum(data))

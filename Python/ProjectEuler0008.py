@@ -1,21 +1,22 @@
 
-#projecteuler.net/problem=8
+# projecteuler.net/problem=8
 
-#Answer: 23514624000
+# Answer: 23514624000
 
-#github.com/firatksee
+# github.com/firatksee
 
 
 def largestProduct(digitNum):
-	result = max(calcProduct(data[i: i + digitNum]) for i in range(len(data) - digitNum + 1))
-	return result
+    result = max(calcProduct(data[i: i + digitNum])
+                 for i in range(len(data) - digitNum + 1))
+    return result
 
 
 def calcProduct(number):
-	result = 1
-	for i in str(number):
-		result *= int(i)
-	return result
+    result = 1
+    for i in str(number):
+        result *= int(i)
+    return result
 
 
 data = "73167176531330624919225119674426574742355349194934"\
@@ -41,4 +42,4 @@ data = "73167176531330624919225119674426574742355349194934"\
 
 
 if __name__ == "__main__":
-	print(largestProduct(13))
+    print(largestProduct(13))

@@ -1,9 +1,9 @@
 
-#projecteuler.net/problem=2
+# projecteuler.net/problem=2
 
-#Answer: 4613732
+# Answer: 4613732
 
-#github.com/firatksee
+# github.com/firatksee
 
 
 # recursive fibonacci algorithm, base cases 0 and 1 return 1
@@ -15,14 +15,16 @@ def fibonacci(step):
 # since the following algorithm is more optimized for this solution,
 # we will not use recursive fibonacci algorithm
 
+
 def fibonacciSumEven(limit):
-	result, prevValue, value = 0, 1, 1
+    result, prevValue, value = 0, 1, 1
 
-	while value <= limit:
-		result += value if value % 2 == 0 else 0
-		prevValue, value = value, prevValue + value
+    while value <= limit:
+        result += value if value % 2 == 0 else 0
+        prevValue, value = value, prevValue + value
 
-	return result
+    return result
+
 
 if __name__ == "__main__":
-	print(fibonacciSumEven(4000000))
+    print(fibonacciSumEven(4000000))

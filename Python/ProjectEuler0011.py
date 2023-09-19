@@ -1,9 +1,9 @@
 
-#projecteuler.net/problem=11
+# projecteuler.net/problem=11
 
-#Answer: 70600674
+# Answer: 70600674
 
-#github.com/firatksee
+# github.com/firatksee
 
 
 def largestProdGrid(multNum):
