@@ -15,7 +15,7 @@ function largestPalindrome(start, stop) {
     for (let m = start; m < stop; m++) {
         for (let n = start; n < stop; n++) {
             let prod = m * n;
-            if (isPalindrome(prod) && prod > largest) largest = prod;
+            if (isPalindrome(prod)) largest = Math.max(largest, prod);
         }
     }
     return largest;
