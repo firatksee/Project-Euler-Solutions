@@ -7,11 +7,14 @@
 
 
 def largestPalindrome(start, stop):
-    result = (m*n for m in range(start, stop)
-              for n in range(start, stop)
-              if str(m*n) == str(m*n)[::-1])
-    return result
+    largest = 0
+    for m in range(start, stop):
+        for n in range(start, stop):
+            prod = m*n
+            if str(prod) == str(prod)[::-1] and prod > largest:
+                largets = prod
+    return largest
 
 
 if __name__ == "__main__":
-    print(max(largestPalindrome(100, 1000)))
+    print(largestPalindrome(100, 1000))
