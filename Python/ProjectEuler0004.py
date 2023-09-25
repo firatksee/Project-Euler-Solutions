@@ -11,8 +11,8 @@ def largestPalindrome(start, stop):
     for m in range(start, stop):
         for n in range(start, stop):
             prod = m * n
-            if str(prod) == str(prod)[::-1] and prod > largest:
-                largest = prod
+            if str(prod) == str(prod)[::-1]:
+                largest = max(largest, prod)
     return largest
 
 
