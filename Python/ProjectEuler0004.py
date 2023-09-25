@@ -10,9 +10,9 @@ def largestPalindrome(start, stop):
     largest = 0
     for m in range(start, stop):
         for n in range(start, stop):
-            prod = m*n
+            prod = m * n
             if str(prod) == str(prod)[::-1] and prod > largest:
-                largets = prod
+                largest = prod
     return largest
 
 
