@@ -16,8 +16,9 @@ function isPrime(number) {
 }
 
 function sumPrimesBelow(n) {
-    let result = 2;
+    if (n <= 2) return 0;
 
+    let result = 2;
     for (let i = 3; i < n; i += 2) {
         if (isPrime(i)) result += i;
     }
