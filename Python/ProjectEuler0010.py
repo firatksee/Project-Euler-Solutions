@@ -21,9 +21,11 @@ def isPrime(number):
 
 
 def sumPrimesBelow(n):
-    result = sum(i for i in range(n) if isPrime(i))
-    return result
+    if n <= 2:
+        return 0
+    result = sum(i for i in range(3, n, 2) if isPrime(i))
+    return result + 2
 
 
 if __name__ == "__main__":
-    print(sumPrimesBelow(2000000))
+    print(sumPrimesBelow(4))
