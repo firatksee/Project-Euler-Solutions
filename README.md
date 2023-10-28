@@ -1,2 +1,3 @@
-# Project-Euler-Python-Solutions
+# Project-Euler-Solutions
+
 projecteuler.net/archives solutions in Python and JavaScript.
